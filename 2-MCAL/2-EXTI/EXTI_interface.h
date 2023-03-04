@@ -8,9 +8,7 @@
 void EXTI_Enable(u8 INT,u8 EXTI_mode);
 void EXTI_Disable(u8 INT );
 void Global_InterruptEnable(void);
-void EXTI_CALLBACK_INT0(void(*PTR0)(void));
-void EXTI_CALLBACK_INT1(void(*PTR1)(void));
-void EXTI_CALLBACK_INT2(void(*PTR2)(void));
+void EXTI_CALLBACK_INT0(void(*PTR)(void));
 
 #define LOW_LEVEL_MODE 0
 #define ANY_CHANGE     1

@@ -12,7 +12,7 @@
 #define DB6  GPIO_PORTA,PORTA1
 #define DB7  GPIO_PORTA,PORTA0
 
-
+#define GPIO_PORT_cfg  GPIO_PORTA
 
 
 

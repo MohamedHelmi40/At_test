@@ -1,5 +1,5 @@
-#include "STD_TYPES.h"
-#include "BIT_MATH.h"
+#include "../../1-LIB/STD_TYPES.h"
+#include "../../1-LIB/BIT_MATH.h"
 
 #include "EXTI_interface.h"
 #include "EXTI_private.h"
@@ -48,30 +48,11 @@ void Global_InterruptEnable(void)
 }
 
 void(*PTF0)(void);
-void(*PTF1)(void);
-void(*PTF2)(void);
-void EXTI_CALLBACK_INT0(void(*PTR0)(void))
+void EXTI_CALLBACK_INT0(void(*PTR)(void))
 {
-	PTF0=PTR0;
+	PTF0=PTR;
 }
-void EXTI_CALLBACK_INT1(void(*PTR1)(void))
-{
-	PTF1=PTR1;
-}
-void EXTI_CALLBACK_INT2(void(*PTR2)(void))
-{
-	PTF2=PTR2;
-}
-
 void __vector_1(void)
 {
 	PTF0();
-}
-void __vector_2(void)
-{
-	PTF1();
-}
-void __vector_3(void)
-{
-	PTF2();
 }

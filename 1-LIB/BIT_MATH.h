@@ -4,7 +4,7 @@
 
 #define CLR_BIT(VAR,BIT_NUM)    VAR &=~(1<<BIT_NUM)
 #define SET_BIT(VAR,BIT_NUM)    VAR |= (1<<BIT_NUM)
-#define GET_BIT(VAR,BIT_NUM)    ((VAR>>BIT_NUM)&0x01)
+#define GET_BIT(VAR,BIT_NUM)    ((VAR>>BIT_NUM)&1)
 #define TOG_BIT(VAR,BIT_NUM)    VAR ^= (1<<BIT_NUM)
 
 

@@ -52,7 +52,7 @@ void LCD_WriteData(u8 copy_data)
 }
 void LCD_init(void)
 {
-	SetPortDirection(GPIO_PORTA,GPIO_OUTPUT);
+	SetPortDirection(GPIO_PORT_cfg,GPIO_OUTPUT);
 	SetPinValue(E,GPIO_LOW);
 	LCD_WriteCommand(0x33);
 	LCD_WriteCommand(0x32);
